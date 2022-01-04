@@ -1,13 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Button from '../components/Button'
 
 const Home = () => {
   const navigate = useNavigate()
   return (
     <>
       <h1>Home</h1>
-      <button onClick={() => navigate('/Sobre')}>Ir para SOBRE</button>
-      <button onClick={() => navigate('/Cadastro')}>Ir para CADASTRO</button>
+      <Button onClick={() => navigate('/Sobre')}>Ir para SOBRE</Button>
+      <Button onClick={() => navigate('/Cadastro')}>Ir para CADASTRO</Button>
     </>
   )
 }
