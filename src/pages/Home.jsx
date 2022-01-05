@@ -1,16 +1,37 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import Button from '../components/Button'
+import { React, useContext } from 'react'
 
-const Home = () => {
-  const navigate = useNavigate()
+import Container from '../components/container'
+import Header from '../components/header'
+import UserContainer from '../components/userContainer'
+import UserDetails from '../components/UserDetails'
+import UserNumbers from '../components/userNumbers'
+import UserPicture from '../components/userPicture'
+
+import { context } from '../context'
+
+export default function Home() {
+  //vou resgatar os dados disponiveis:
+  const ctx = useContext(context)
+
   return (
-    <>
-      <h1>Home</h1>
-      <Button onClick={() => navigate('/Sobre')}>Ir para SOBRE</Button>
-      <Button onClick={() => navigate('/Cadastro')}>Ir para CADASTRO</Button>
-    </>
+    <Container>
+      <Header />
+      <UserContainer>
+        <UserPicture
+          url={ctx.userData?.avatar_url}
+          alternativeText={ctx.userData?.login}
+        />
+        <UserDetails
+          name={ctx.userData?.name}
+          login={ctx.userData?.login}
+          bio={ctx.userData?.bio}
+        />
+        <UserNumbers
+          repos={ctx.userData.public_repos}
+          followers={ctx.userData.followers}
+          following={ctx.userData.following}
+        />
+      </UserContainer>
+    </Container>
   )
 }
-
-export default Home
