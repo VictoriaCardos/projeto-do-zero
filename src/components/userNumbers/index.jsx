@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const UserNumbers = props => {
   return (
     <Container>
-      <Link to="/Cadastro">
+      <Link to="/repos">
         <NumberContainer>
           <h1>{props.repos}</h1>
           <h2>Repositórios</h2>
