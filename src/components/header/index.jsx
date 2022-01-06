@@ -17,7 +17,10 @@ const Header = () => {
   async function getUserData() {
     try {
       const response = await api.get(`/${searchedValue}`)
+      const repos = await api.get(`/${searchedValue}/repos`)
+
       ctx.setUserData(response.data)
+      ctx.setRepos(repos.data)
     } catch (err) {
       console.log(err)
     }
