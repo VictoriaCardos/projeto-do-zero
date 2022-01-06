@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Cadastro from './pages/Cadastro'
+import Repos from './pages/Repos'
 
 export default function MainRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Cadastro" element={<Cadastro />} />
+      <Route path="/repos" element={<Repos/>} />
     </Routes>
   )
 }
