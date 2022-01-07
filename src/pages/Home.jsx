@@ -10,7 +10,7 @@ import UserPicture from '../components/userPicture'
 import { context } from '../context'
 
 export default function Home() {
-  //vou resgatar os dados disponiveis:
+  //vou resgatar os dados disponíveis:
   const ctx = useContext(context)
 
   return (
