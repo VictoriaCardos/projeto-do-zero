@@ -11,11 +11,12 @@ const UserNumbers = props => {
           <h2>Repositórios</h2>
         </NumberContainer>
       </Link>
-
-      <NumberContainer>
-        <h1>{props.followers}</h1>
-        <h2>Seguidores</h2>
-      </NumberContainer>
+      <Link to="/follow">
+        <NumberContainer>
+          <h1>{props.followers}</h1>
+          <h2>Seguidores</h2>
+        </NumberContainer>
+      </Link>
 
       <NumberContainer>
         <h1>{props.following}</h1>
