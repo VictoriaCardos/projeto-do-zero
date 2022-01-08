@@ -18,10 +18,12 @@ const UserNumbers = props => {
         </NumberContainer>
       </Link>
 
-      <NumberContainer>
-        <h1>{props.following}</h1>
-        <h2>Seguindo</h2>
-      </NumberContainer>
+      <Link to="following">
+        <NumberContainer>
+          <h1>{props.following}</h1>
+          <h2>Seguindo</h2>
+        </NumberContainer>
+      </Link>
     </Container>
   )
 }
