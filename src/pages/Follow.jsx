@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FiCornerDownLeft } from 'react-icons/fi'
 import Button from '../components/button/Button'
 
 import Container from '../components/container'
@@ -13,7 +14,9 @@ const Follow = () => {
 
   return (
     <Container>
-      <Button onClick={() => navigate('/')}>VOLTAR</Button>
+      <Button onClick={() => navigate('/')}>
+        <FiCornerDownLeft size={15} />
+      </Button>
       <FollowContainer name={ctx.userData?.name} followers={ctx.followers} />
     </Container>
   )
