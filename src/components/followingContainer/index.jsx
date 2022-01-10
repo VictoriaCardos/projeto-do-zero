@@ -1,4 +1,10 @@
-import { Section, Title, ListOfFollowingContainer, Foll } from './styles'
+import {
+  Section,
+  Title,
+  ListOfFollowingContainer,
+  Foll,
+  ProfilePicture
+} from './styles'
 import React from 'react'
 
 const FollowingContainer = props => {
@@ -11,7 +17,10 @@ const FollowingContainer = props => {
             onClick={() => window.location.href(foll?.html_url)}
             key={foll?.id}
           >
-            <h2>{foll?.login}</h2>
+            <ProfilePicture src={foll.avatar_url} alt={foll.avatar_url} />
+            <span>
+              <h2>{foll?.login}</h2>
+            </span>
           </Foll>
         ))}
       </ListOfFollowingContainer>
