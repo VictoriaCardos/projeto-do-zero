@@ -14,6 +14,15 @@ const Header = () => {
   const ctx = useContext(context)
   const [searchedValue, setSearchedValue] = useState('')
 
+  const verifyInput = () => {
+    if (searchedValue !== '') {
+      getUserData()
+      setSearchedValue('')
+    } else {
+      alert('Insira um user para a pesquisa primeiro!')
+    }
+  }
+
   async function getUserData() {
     try {
       const response = await api.get(`/${searchedValue}`)
@@ -27,6 +36,7 @@ const Header = () => {
       ctx.setFollowing(following.data)
     } catch (err) {
       console.log(err)
+      alert('Usuário não encontrado!')
     }
   }
 
@@ -39,7 +49,7 @@ const Header = () => {
           onChange={e => setSearchedValue(e.target.value)}
         />
 
-        <HeaderSearchButton onClick={getUserData}>
+        <HeaderSearchButton onClick={verifyInput}>
           <FiSearch size={15} />
         </HeaderSearchButton>
       </HeaderInputContainer>
