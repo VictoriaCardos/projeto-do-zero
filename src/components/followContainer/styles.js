@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   width: 400px;
-  height: 400px;
+  height: 435px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   border-bottom: 10px solid #ff7a00;
@@ -28,16 +28,22 @@ export const ListOfFollowersContainer = styled.h1`
   width: 100%;
   padding: 10px;
   overflow-y: scroll;
+  overflow-x: hidden;
 `
 
 export const Foll = styled.h2`
   width: 100%;
-  height: 80px;
+  height: 140px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+
   h2 {
+    position: relative;
+    left: 190px;
+    bottom: 100px;
+
     font-size: 15px;
     width: 100%;
     overflow: hidden;
@@ -53,4 +59,11 @@ export const Foll = styled.h2`
     line-height: 1.3;
     margin-top: 10px;
   }
+`
+
+export const ProfilePicture = styled.img`
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 8px solid #fff;
 `
