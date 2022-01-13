@@ -14,10 +14,10 @@ const Following = () => {
 
   return (
     <Container>
+      <FollowingContainer name={ctx.userData?.name} following={ctx.following} />
       <Button onClick={() => navigate('/')}>
         <FiCornerDownLeft size={15} />
       </Button>
-      <FollowingContainer name={ctx.userData?.name} following={ctx.following} />
     </Container>
   )
 }
