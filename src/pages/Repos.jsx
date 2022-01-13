@@ -14,10 +14,10 @@ const Repos = () => {
 
   return (
     <Container>
+      <ReposContainer name={ctx.userData?.name} repos={ctx.repos} />
       <Button onClick={() => navigate('/')}>
         <FiCornerDownLeft size={15} />
       </Button>
-      <ReposContainer name={ctx.userData?.name} repos={ctx.repos} />
     </Container>
   )
 }
