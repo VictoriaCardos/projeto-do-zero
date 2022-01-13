@@ -1,5 +1,5 @@
-import { Section, Title, ListOfReposContainer, Repo } from './styles'
 import React from 'react'
+import { Section, Title, ListOfReposContainer, Repo } from './styles'
 
 const ReposContainer = props => {
   return (
