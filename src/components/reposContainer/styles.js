@@ -43,6 +43,15 @@ export const Repo = styled.h2`
     overflow: hidden;
     color: #444;
   }
+  h3 {
+    font-size: 15px;
+    width: 100%;
+    overflow: hidden;
+    color: #444;
+    position: relative;
+    left: 300px;
+    bottom: 20px;
+  }
   p {
     font-size: 12px;
     font-weight: 400;
