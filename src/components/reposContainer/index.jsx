@@ -13,6 +13,7 @@ const ReposContainer = props => {
           >
             <h2>{repo?.name}</h2>
             <p>{repo?.description}</p>
+            <h3>{repo?.language}</h3>
           </Repo>
         ))}
       </ListOfReposContainer>
