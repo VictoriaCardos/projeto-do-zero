@@ -11,4 +11,5 @@
 .goBack:hover {
   background: #e26f04ca;
   transition-duration: 1s;
+  cursor: pointer;
 }
