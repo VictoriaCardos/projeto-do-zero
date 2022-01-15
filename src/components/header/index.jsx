@@ -1,5 +1,6 @@
 import { React, useState, useContext } from 'react'
 import { FiSearch } from 'react-icons/fi'
+import { AiFillGithub } from 'react-icons/ai'
 import {
   HeaderSection,
   HeaderTitle,
@@ -42,7 +43,10 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <HeaderTitle>Github Profile</HeaderTitle>
+      <HeaderTitle>
+        Github Profile <AiFillGithub size={45} />
+      </HeaderTitle>
+
       <HeaderInputContainer>
         <HeaderInput
           value={searchedValue}
