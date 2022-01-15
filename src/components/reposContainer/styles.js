@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   width: 400px;
-  height: 400px;
+  height: 435px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   border-bottom: 10px solid #ff7a00;
@@ -28,6 +28,7 @@ export const ListOfReposContainer = styled.h1`
   width: 100%;
   padding: 10px;
   overflow-y: scroll;
+  overflow-x: hidden;
 `
 
 export const Repo = styled.h2`
